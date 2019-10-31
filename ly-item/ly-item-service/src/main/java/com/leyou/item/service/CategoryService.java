@@ -15,7 +15,7 @@ public class CategoryService {
 
     public List<Category> queryListByParent(Long id){
         Category category = new Category();
-        category.setId(id);
+        category.setParentId(id);
         List<Category> select = this.categoryMapper.select(category);
         return select;
     }

@@ -20,3 +20,11 @@ eureka:
     prefer-ip-address: true
     ip-address: 127.0.0.1
     instance-id: ${spring.application.name}:${server.port}
+mybatis:
+  # 指定全局配置文件位置
+#  config-location: classpath:mybatis/mybatis-config.xml
+  # 指定sql映射文件位置
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    call-setters-on-nulls: true
+    map-underscore-to-camel-case: true

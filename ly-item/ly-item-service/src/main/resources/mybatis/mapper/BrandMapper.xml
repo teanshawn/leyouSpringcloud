@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leyou.item.mapper.BrandMapper">
+
+    <select id="queryByPage" resultType="com.leyou.item.pojo.Brand">
+        SELECT * FROM tb_brand
+        <if test="key != null and key !=''" >
+            where name like #{key}
+        </if>
+        ORDER BY #{sortBy}
+        <choose>
+            <when test="desc == true">
+                DESC
+            </when>
+        </choose>
+
+           LIMIT #{page},#{rows}
+    </select>
+
+    <select id="queryForTotalCount" resultType="java.lang.Integer">
+        SELECT count(*) FROM tb_brand
+        <if test="key != null and key !=''" >
+            where name like #{key}
+        </if>
+    </select>
+
+
+</mapper>

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -20,5 +21,9 @@ public class CategoryService {
         category.setParentId(id);
         List<Category> select = this.categoryMapper.select(category);
         return select;
+    }
+
+    public List<String> queryNameByIds(List<Long> ids){
+        return categoryMapper.selectByIdList(ids).stream().map(Category::getName).collect(Collectors.toList());
     }
 }

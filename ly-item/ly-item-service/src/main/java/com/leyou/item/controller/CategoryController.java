@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
@@ -22,8 +21,8 @@ public class CategoryController {
 
     @GetMapping("list")
     public ResponseEntity<List<Category>> queryByParentId(
-            @RequestParam(value = "pid",defaultValue = "0") Long id
-    ){
+            @RequestParam(value = "pid", defaultValue = "0") Long id
+    ) {
         List<Category> list = this.categoryService.queryListByParent(id);
         if (list == null || list.size() < 1) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -31,4 +30,11 @@ public class CategoryController {
         return ResponseEntity.ok(list);
     }
 
+    @GetMapping("names")
+    public ResponseEntity<List<String>> queryNameByIds(@RequestParam("ids") List<Long> ids) {
+        List<String> strings = categoryService.queryNameByIds(ids);
+        if (strings == null || strings.size() < 1)
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return ResponseEntity.ok(strings);
+    }
 }

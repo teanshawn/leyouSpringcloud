@@ -1,0 +1,175 @@
+[
+  {
+    "group": "主体",
+    "params": [
+      {
+        "k": "品牌",
+        "searchable": false,
+        "global": true,
+        "v": "魅族（MEIZU）"
+      },
+      {
+        "k": "型号",
+        "searchable": false,
+        "global": true,
+        "v": "魅蓝X"
+      },
+      {
+        "k": "上市年份",
+        "searchable": false,
+        "global": true,
+        "numerical": true,
+        "unit": "年",
+        "v": 2016.0
+      }
+    ]
+  },
+  {
+    "group": "基本信息",
+    "params": [
+      {
+        "k": "机身颜色",
+        "searchable": false,
+        "global": false,
+        "options": [
+          "珠光白",
+          "流光金"
+        ]
+      },
+      {
+        "k": "机身重量（g）",
+        "searchable": false,
+        "global": true,
+        "numerical": true,
+        "unit": "g",
+        "v": 165
+      },
+      {
+        "k": "机身材质工艺",
+        "searchable": true,
+        "global": true,
+        "v": null
+      }
+    ]
+  },
+  {
+    "group": "操作系统",
+    "params": [
+      {
+        "k": "操作系统",
+        "searchable": true,
+        "global": true,
+        "v": "Android"
+      }
+    ]
+  },
+  {
+    "group": "主芯片",
+    "params": [
+      {
+        "k": "CPU品牌",
+        "searchable": true,
+        "global": true,
+        "v": "联发科（MTK）"
+      },
+      {
+        "k": "CPU型号",
+        "searchable": false,
+        "global": true,
+        "v": "P20（MT6757）"
+      },
+      {
+        "k": "CPU核数",
+        "searchable": true,
+        "global": true,
+        "v": "八核"
+      },
+      {
+        "k": "CPU频率",
+        "searchable": true,
+        "global": true,
+        "numerical": true,
+        "unit": "GHz",
+        "v": 2.3
+      }
+    ]
+  },
+  {
+    "group": "存储",
+    "params": [
+      {
+        "k": "内存",
+        "searchable": true,
+        "global": false,
+        "numerical": false,
+        "unit": "GB",
+        "options": [
+          "3GB"
+        ]
+      },
+      {
+        "k": "机身存储",
+        "searchable": true,
+        "global": false,
+        "numerical": false,
+        "unit": "GB",
+        "options": [
+          "32GB"
+        ]
+      }
+    ]
+  },
+  {
+    "group": "屏幕",
+    "params": [
+      {
+        "k": "主屏幕尺寸（英寸）",
+        "searchable": true,
+        "global": true,
+        "numerical": true,
+        "unit": "英寸",
+        "v": 5.5
+      },
+      {
+        "k": "分辨率",
+        "searchable": false,
+        "global": true,
+        "v": "1920*1080(FHD)"
+      }
+    ]
+  },
+  {
+    "group": "摄像头",
+    "params": [
+      {
+        "k": "前置摄像头",
+        "searchable": true,
+        "global": true,
+        "numerical": true,
+        "unit": "万",
+        "v": 500.0
+      },
+      {
+        "k": "后置摄像头",
+        "searchable": true,
+        "global": true,
+        "numerical": true,
+        "unit": "万",
+        "v": 1200.0
+      }
+    ]
+  },
+  {
+    "group": "电池信息",
+    "params": [
+      {
+        "k": "电池容量（mAh）",
+        "searchable": true,
+        "global": true,
+        "numerical": true,
+        "unit": "mAh",
+        "v": 3200.0
+      }
+    ]
+  }
+]

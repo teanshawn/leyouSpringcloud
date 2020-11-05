@@ -36,8 +36,8 @@ public class BrandController {
 
         List<Brand> list = brandService.queryByPage(page, rows, sortBy, desc, key);
         Integer total = brandService.queryForTotalCount(key);
-        int totalPages = (total - 1) / rows + 1;
-        PageResult<Brand> result = new PageResult<Brand>(total, totalPages, list);
+        long totalPages = (total - 1) / rows + 1;
+        PageResult<Brand> result = new PageResult<Brand>(Long.parseLong(total+""), totalPages, list);
         return result;
     }
 

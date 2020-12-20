@@ -31,10 +31,10 @@ public class SwaggerConfig {
         return new ApiInfo("swagger测试",
                 "品牌controller测试",
                 "1.0",
-                "https://github.com/kong0827",
+                "https://github.com/termsOfServiceUrl",
                 contact,                                   // 作者信息
                 "Apache 2.0",
-                "ttps://github.com/kong0827",
+                "ttps://github.com/licenseUrl",
                 new ArrayList());
     }
 }

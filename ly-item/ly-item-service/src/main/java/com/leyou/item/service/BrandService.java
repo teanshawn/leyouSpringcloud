@@ -47,4 +47,8 @@ public class BrandService {
         brand.setId(bid);
         brandMapper.deleteByPrimaryKey(bid);
     }
+
+    public List<Brand> queryBrandByBrandIds(List<Long> ids) {
+        return this.brandMapper.selectByIdList(ids);
+    }
 }

@@ -4,11 +4,12 @@ package com.leyou.item.mapper;
 import com.leyou.item.pojo.Brand;
 import com.leyou.item.pojo.Category;
 import org.apache.ibatis.annotations.*;
+import tk.mybatis.mapper.additional.idlist.SelectByIdListMapper;
 
 import java.util.List;
 
 @Mapper
-public interface BrandMapper extends tk.mybatis.mapper.common.Mapper<Brand> {
+public interface BrandMapper extends tk.mybatis.mapper.common.Mapper<Brand>, SelectByIdListMapper<Brand,Long> {
 
     List<Brand> queryByPage(Integer page, Integer rows, String sortBy, Boolean desc, String key);
 //    List<Brand> queryByPage(@Param("page") Integer page, @Param("rows") Integer rows, @Param("sortBy") String sortBy, @Param("desc") Boolean desc, @Param("key") String key);

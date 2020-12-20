@@ -77,4 +77,18 @@ public class BrandController {
         brandService.deleteBrand(bid);
         return new ResponseEntity(HttpStatus.OK);
     }
+
+    /**
+     * 根据品牌id结合，查询品牌信息
+     * @param ids
+     * @return
+     */
+    @GetMapping("list")
+    public ResponseEntity<List<Brand>> queryBrandByIds(@RequestParam("ids") List<Long> ids){
+        List<Brand> list = this.brandService.queryBrandByBrandIds(ids);
+        if (list == null){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return ResponseEntity.ok(list);
+    }
 }

@@ -45,7 +45,7 @@ public interface GoodsApi {
      * @return
      */
     @GetMapping("/spu/detail/{id}")
-    SpuDetail querySpuDetailBySpuId(@PathVariable("id") Long id);
+    ResponseEntity<SpuDetail> querySpuDetailBySpuId(@PathVariable("id") Long id);
 
     /**
      * 根据Spu的id查询其下所有的sku
